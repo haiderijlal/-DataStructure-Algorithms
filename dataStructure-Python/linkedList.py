@@ -31,7 +31,7 @@ class Element():                               # an entity to hold value and add
     def __init__(self, value):                 # to create element with a value
         self.value = value
         self.next = None                       # it do not hold any address on creation
-        
+
 
 class LinkedList():
     def __init__(self, head=None):
@@ -85,21 +85,17 @@ class LinkedList():
     def delete(self, value):
         if self.head:
             current = self.head
-            previous = current
-                                                 
-            if current.value == value:              # To delete the value if the value is the first value
+            previous = current 
+            if current.value == value:             
                 self.head == current.next
                 return None
-
             while current.next:
                 if current.value == value:
                     temp = current.next
                     previous.next = temp
                     return None
-            
                 previous = current
-                current = current.next
-#     To delete the item if the item is last item                
+                current = current.next                                                      
             if current.value == value:
                 previous.next = None
             return None
